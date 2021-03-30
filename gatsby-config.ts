@@ -66,6 +66,9 @@ export const plugins = [
       trackingIds: [
         "G-YXCKGKXG93",
       ],
+      pluginConfig: {
+        head: true,
+      },
     },
   },
 ]

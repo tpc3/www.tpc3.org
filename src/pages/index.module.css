@@ -17,7 +17,7 @@
   z-index: -1;
 }
 .fluid canvas {
-  opacity: 0.9;
+  opacity: 0.85;
 }
 .video {
   position: absolute;
@@ -29,7 +29,6 @@
   margin: 0;
   width: auto;
   z-index: -2;
-  opacity: 0.9;
 }
 .container {
   overflow: hidden;

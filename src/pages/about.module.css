@@ -1,0 +1,70 @@
+.container {
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.title {
+  flex: 1;
+}
+.content {
+  flex: 2;
+  margin-left: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+.content p {
+  margin-top: 50px;
+}
+.konbu {
+  width: 200px;
+}
+.minecraft {
+  width: 500px;
+}
+.body {
+  margin-top: 50px;
+}
+.button {
+  margin: 10px;
+  padding: 10px;
+}
+.link {
+  color: white;
+  text-decoration: inherit;
+  cursor: auto;
+}
+.slider {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  height: 80vh;
+  width: 95vw;
+  position: absolute;
+  z-index: -1;
+}
+.slider div {
+  background-color: transparent;
+}
+@media (max-width: 600px) {
+  .konbu {
+    width: 50px;
+  }
+  .minecraft {
+    width: 100px;
+  }
+  .content {
+    margin-left: 10px;
+    flex: 1;
+  }
+  .container {
+    margin-left: 10px;
+  }
+  .body {
+    margin-top: 10px;
+  }
+}

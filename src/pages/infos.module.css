@@ -1,0 +1,14 @@
+.link {
+  color: white;
+  text-decoration: inherit;
+  cursor: auto;
+}
+.linkNoColor {
+  color: white;
+}
+.text {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media (max-width: 600px) {
+}

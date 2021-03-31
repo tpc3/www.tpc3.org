@@ -7,6 +7,7 @@ import {
   Theme,
   createMuiTheme,
   ThemeProvider,
+  responsiveFontSizes
 } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
 import Fab from "@material-ui/core/Fab"
@@ -28,29 +29,15 @@ type DataProps = {
   }
 }
 
-const themeFontTitle = createMuiTheme({
+let themeFontTitle = createMuiTheme({
   typography: {
     fontFamily: '"Press Start 2P"',
-    h1: {
-      fontWeight: 400,
-      fontSize: "3rem",
-      "@media (max-width:600px)": {
-        fontSize: "1rem",
-      },
-    },
   },
 })
+themeFontTitle = responsiveFontSizes(themeFontTitle);
 
-const themeFontBody = createMuiTheme({
-  typography: {
-    body1: {
-      fontSize: "1.5rem",
-      "@media (max-width:600px)": {
-        fontSize: "1rem",
-      },
-    },
-  },
-})
+let themeFontBody = createMuiTheme()
+themeFontBody = responsiveFontSizes(themeFontBody);
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -69,7 +56,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
         <div className={styles.container}>
           <div className={styles.title}>
             <ThemeProvider theme={themeFontTitle}>
-              <Typography variant="h1">
+              <Typography variant="h4">
                 We are the "PCCDiscord" community!
               </Typography>
             </ThemeProvider>
@@ -81,8 +68,6 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                   現在8期生から11期生に至るまで凡そ70名程度が在籍しています。
                   <br />
                   名前の通り、Discordサーバーを活動拠点としています。
-                  <br />
-                  （このページは横スクロール形式になっています。右矢印のボタンを押すかスワイプして先へお進みください。）
                 </Typography>
               </ThemeProvider>
             </div>
@@ -99,14 +84,14 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
         <div className={styles.container}>
           <div className={styles.title}>
             <ThemeProvider theme={themeFontTitle}>
-              <Typography variant="h1">From development to games.</Typography>
+              <Typography variant="h4">From dev to games.</Typography>
             </ThemeProvider>
             <div className={styles.body}>
               <ThemeProvider theme={themeFontBody}>
                 <Typography variant="body1" className={styles.body}>
-                  PCCDiscordには、自作PC、開発、部活や成績、作品の共有、ゲームなどの趣味、ニュースを含む様々な板（チャットルーム）が用意されており、メンバーが情報共有に使用できます。
+                  PCCDiscordでは、IT技術から学習、作品の共有等の部活動、ゲーム等の趣味、ニュースまで様々な情報を共有することができます。
                   <br />
-                  様々な進路へ進んだOBや在校生の先輩へ技術的問題から進路相談まで幅広く相談することもできます。
+                  勿論様々な進路へ進んだOBや在校生の先輩へ相談することも可能です。
                 </Typography>
               </ThemeProvider>
             </div>
@@ -120,21 +105,19 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
             <Typography variant="body1">
               PCCDiscordではゲーム談義も盛んです。
               <br />-
-              少なくともPCCDiscord内でMinecraftのMod入サーバー（私達は昆布工業鯖と呼んでいます）が2年以上続いているぐらいには。
+              少なくともPCCDiscord内でMinecraftサーバーが2年以上続いているぐらいには。
             </Typography>
           </div>
         </div>
         <div className={styles.container}>
           <div className={styles.title}>
             <ThemeProvider theme={themeFontTitle}>
-              <Typography variant="h1">The power of resources.</Typography>
+              <Typography variant="h4">The power of resources.</Typography>
             </ThemeProvider>
             <div className={styles.body}>
               <ThemeProvider theme={themeFontBody}>
                 <Typography variant="body1" className={styles.body}>
-                  新しく入ったチャットルームで会話に混ざりにくく感じたことはありませんか？
-                  <br />
-                  そこで私達は、PCCDiscord内のみで使われる用語やイベントの概要等を専用のWikiにまとめることにしました。
+                  私達は、初心者でも会話に馴染めるようPCCDiscord内のみで使われる用語やイベントの概要等を専用のWikiにまとめています。
                   <br />
                   他にもVC内でのテキスト読み上げや自動返答ボットを始め、メンバーによって開発された様々なシステム達が会話を彩ります。
                 </Typography>
@@ -160,7 +143,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
         <div className={styles.container}>
           <div className={styles.title}>
             <ThemeProvider theme={themeFontTitle}>
-              <Typography variant="h1">We have events for you!</Typography>
+              <Typography variant="h4">We have events for you!</Typography>
             </ThemeProvider>
             <div className={styles.body}>
               <ThemeProvider theme={themeFontBody}>
@@ -180,17 +163,14 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
               className={styles.minecraft}
             />
             <Typography variant="body1">
-              クリスマスに開催したイベントで理想の自室をアンケートし、その結果要望を分類別にまとめたスライドのうち、一番"マシ"なものを拾ってきました。
-              <br />
-              これでもまだマシな方なのです -
-              他のカテゴリでは更に要求がエスカレートしています。
+              クリスマスに開催したイベントで理想の自室をアンケートし、その結果要望を分類別にまとめたスライドの一つです。
             </Typography>
           </div>
         </div>
         <div className={styles.container}>
           <div className={styles.title}>
             <ThemeProvider theme={themeFontTitle}>
-              <Typography variant="h1">Sounds good? Join us!</Typography>
+              <Typography variant="h4">Sounds good? Join us!</Typography>
             </ThemeProvider>
             <div className={styles.body}>
               <ThemeProvider theme={themeFontBody}>
@@ -206,7 +186,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
           </div>
           <div className={styles.content}>
             <Link to="/join" className={styles.link}>
-              <Fab aria-label="join" className={styles.button}>
+              <Fab aria-label="join">
                 <SendIcon />
               </Fab>
             </Link>

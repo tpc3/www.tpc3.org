@@ -73,6 +73,7 @@ const Header = ({ siteTitle }) => {
             edge="start"
             className={classes.menuButton}
             onClick={handleDrawerOpen}
+            aria-label="menu"
           >
             <MenuIcon />
           </IconButton>

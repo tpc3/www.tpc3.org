@@ -1,5 +1,6 @@
 import * as React from "react"
 import { PageProps, Link, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import {
   createStyles,
   makeStyles,
@@ -18,7 +19,6 @@ import SEO from "../components/seo"
 
 import * as styles from "./about.module.css"
 import konbuParrot from "../images/konbuparrot.gif"
-import gamingMinecraft from "../images/minecraft.png"
 import logoVideo from "../images/logo.mp4"
 import konfesSlide from "../images/konbufest.png"
 
@@ -112,8 +112,8 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
             </div>
           </div>
           <div className={styles.content}>
-            <img
-              src={gamingMinecraft}
+            <StaticImage
+              src="../images/minecraft.png"
               alt="gamingMinecraft"
               className={styles.minecraft}
             />

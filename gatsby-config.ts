@@ -63,9 +63,7 @@ export const plugins = [
   {
     resolve: `gatsby-plugin-google-gtag`,
     options: {
-      trackingIds: [
-        "G-YXCKGKXG93",
-      ],
+      trackingIds: ["G-YXCKGKXG93"],
       pluginConfig: {
         head: true,
       },

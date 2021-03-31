@@ -160,9 +160,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
         <div className={styles.container}>
           <div className={styles.title}>
             <ThemeProvider theme={themeFontTitle}>
-              <Typography variant="h1">
-                We have events for you!
-              </Typography>
+              <Typography variant="h1">We have events for you!</Typography>
             </ThemeProvider>
             <div className={styles.body}>
               <ThemeProvider theme={themeFontBody}>

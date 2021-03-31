@@ -35,7 +35,7 @@ let themeFontTitle = createMuiTheme({
   },
 })
 
-themeFontTitle = responsiveFontSizes(themeFontTitle);
+themeFontTitle = responsiveFontSizes(themeFontTitle)
 
 const themeFontBody = createMuiTheme({
   typography: {

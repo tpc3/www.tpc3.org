@@ -17,7 +17,7 @@
   z-index: -1;
 }
 .fluid canvas {
-  opacity: 0.85;
+  opacity: 0.8;
 }
 .video {
   position: absolute;
@@ -27,9 +27,19 @@
   transform: translate(-50%, -50%);
   padding: 0;
   margin: 0;
-  width: auto;
-  height: 100vh;
   z-index: -2;
+}
+@media (min-aspect-ratio: 16/9) {
+  .video {
+    width: 100vw;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video {
+    width: auto;
+    height: 100vh;
+  }
 }
 .container {
   overflow: hidden;

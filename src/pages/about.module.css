@@ -1,55 +1,55 @@
 .container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .title {
-  width: 40vw;
+    width: 40vw;
 }
 .content {
-  width: 40vw;
-  margin-left: 3vw;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    width: 40vw;
+    margin-left: 3vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .content p {
-  margin-top: 5vh;
+    margin-top: 5vh;
 }
 .konbu {
-  width: 15vw;
+    width: 15vw;
 }
 .minecraft {
-  width: 40vw;
+    width: 40vw;
 }
 .body {
-  margin-top: 3vh;
+    margin-top: 3vh;
 }
 .link {
-  color: white;
-  text-decoration: inherit;
-  cursor: auto;
+    color: white;
+    text-decoration: inherit;
+    cursor: auto;
 }
 .slider {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  transform: translateY(-50%) translateX(-50%);
-  height: 85vh;
-  width: 95vw;
-  position: absolute;
-  z-index: -1;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    height: 85vh;
+    width: 95vw;
+    position: absolute;
+    z-index: -1;
 }
 .slider div {
-  background-color: transparent;
+    background-color: transparent;
 }
 @media (max-width: 600px) {
-  .body {
-    margin-top: 1vh;
-  }
-  .content {
-    margin-top: 15vh;
-  }
+    .body {
+        margin-top: 1vh;
+    }
+    .content {
+        margin-top: 15vh;
+    }
 }

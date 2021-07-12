@@ -90,8 +90,8 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                     <div className={styles.content}>
                         <StaticImage src="../images/minecraft.png" alt="gamingMinecraft" className={styles.minecraft} />
                         <Typography variant="body1">
-                            PCCDiscordではゲーム談義も盛んです。
-                            <br />- 少なくともPCCDiscord内でMinecraftサーバーが2年以上続いているぐらいには。
+                            PCCCommunityではゲーム談義も盛んです。
+                            <br />- 少なくともPCCCommunity内でMinecraftサーバーが2年以上続いているぐらいには。
                         </Typography>
                     </div>
                 </div>

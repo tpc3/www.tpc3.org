@@ -85,7 +85,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                 </Typography>
             </ThemeProvider>
             <Typography className={styles.text}>
-                This site is developed by owner of the PCCDiscord.
+                This site is developed by owner of the PCCCommunity.
                 <br />
                 If you have any questions, contact me from this form.
                 <br />

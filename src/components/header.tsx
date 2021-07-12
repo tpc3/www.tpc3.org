@@ -69,7 +69,7 @@ const Header = ({ siteTitle }) => {
                     <ThemeProvider theme={themeFontTitle}>
                         <Typography variant="h6" className={classes.title}>
                             <Link to="/" className={styles.link}>
-                                PCCDiscord
+                                PCCCommunity
                             </Link>
                         </Typography>
                     </ThemeProvider>

@@ -43,7 +43,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                 </Typography>
             </ThemeProvider>
             <Typography className={styles.text}>
-                PCCDiscordに参加したいですか？こちらは参加方法を記したページです。
+                PCCCommunityに参加したいですか？こちらは参加方法を記したページです。
                 <br />
                 パソコン部員以外の方の参加は基本的に招待制となっております。
             </Typography>
@@ -51,7 +51,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                 おことわり
             </Typography>
             <Typography className={styles.text}>
-                PCCDiscordでは、現在多摩科学技術高校生並びに卒業生、入学が確定している者以外の参加を基本的に受け付けておりません。
+                PCCCommunityでは、現在多摩科学技術高校生並びに卒業生、入学が確定している者以外の参加を基本的に受け付けておりません。
                 <br />
                 予めご了承ください。
             </Typography>

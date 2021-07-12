@@ -49,16 +49,16 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                 <div className={styles.container}>
                     <div className={styles.title}>
                         <ThemeProvider theme={themeFontTitle}>
-                            <Typography variant="h4">We are the "PCCDiscord" community!</Typography>
+                            <Typography variant="h4">We are the "PCCCommunity"!</Typography>
                         </ThemeProvider>
                         <div className={styles.body}>
                             <ThemeProvider theme={themeFontBody}>
                                 <Typography variant="body1" className={styles.body}>
-                                    私達PCCDiscordは、多摩科学技術高校パソコン部に所属する有志部員・OBによって構成されているコミュニティです。
+                                    私達PCCCommunityは、多摩科学技術高校パソコン部に所属する有志部員・OBによって構成されているコミュニティです。
                                     <br />
                                     現在8期生から11期生に至るまで凡そ70名程度が在籍しています。
                                     <br />
-                                    名前の通り、Discordサーバーを活動拠点としています。
+                                    Discordサーバーを活動拠点としています。
                                 </Typography>
                             </ThemeProvider>
                         </div>
@@ -80,7 +80,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                         <div className={styles.body}>
                             <ThemeProvider theme={themeFontBody}>
                                 <Typography variant="body1" className={styles.body}>
-                                    PCCDiscordでは、IT技術から学習、作品の共有等の部活動、ゲーム等の趣味、ニュースまで様々な情報を共有することができます。
+                                    PCCCommunityでは、IT技術から学習、作品の共有等の部活動、ゲーム等の趣味、ニュースまで様々な情報を共有することができます。
                                     <br />
                                     勿論様々な進路へ進んだOBや在校生の先輩へ相談することも可能です。
                                 </Typography>
@@ -103,7 +103,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                         <div className={styles.body}>
                             <ThemeProvider theme={themeFontBody}>
                                 <Typography variant="body1" className={styles.body}>
-                                    私達は、初心者でも会話に馴染めるようPCCDiscord内のみで使われる用語やイベントの概要等を専用のWikiにまとめています。
+                                    私達は、初心者でも会話に馴染めるようPCCCommunity内のみで使われる用語やイベントの概要等を専用のWikiにまとめています。
                                     <br />
                                     他にもVC内でのテキスト読み上げや自動返答ボットを始め、メンバーによって開発された様々なシステム達が会話を彩ります。
                                 </Typography>
@@ -127,7 +127,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                         <div className={styles.body}>
                             <ThemeProvider theme={themeFontBody}>
                                 <Typography variant="body1" className={styles.body}>
-                                    PCCDiscordではゲーム、オリエンテーション、ITワークショップからお便り等を紹介するラジオ番組、カラオケ会、食事会まで幅広いイベントが頻繁に開催されています。
+                                    PCCCommunityではゲーム、オリエンテーション、ITワークショップからお便り等を紹介するラジオ番組、カラオケ会、食事会まで幅広いイベントが頻繁に開催されています。
                                     <br />
                                     勿論これらへの参加は自由です。気が向いたら是非ご参加ください。
                                     <br />

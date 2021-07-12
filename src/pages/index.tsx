@@ -52,7 +52,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                 <Tilt gyroscope={true} trackOnWindow={true}>
                     <ThemeProvider theme={themeFontTitle}>
                         <Typography variant="h2" onClick={addRandomSplats}>
-                            We are the "PCCDiscord"
+                            We are the "PCCCommunity"
                         </Typography>
                     </ThemeProvider>
                 </Tilt>

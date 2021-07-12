@@ -1,8 +1,8 @@
 export const siteMetadata = {
-    title: `PCCDiscord`,
-    description: `PCCDiscord official website developed by the owner.`,
+    title: `PCCCommunity`,
+    description: `PCCCommunity official website`,
     author: `@gatsbyjs`,
-    siteUrl: `https://pccdiscord.pages.dev`,
+    siteUrl: `https://tpc3.pages.dev`,
 }
 export const plugins = [
     `gatsby-plugin-react-helmet`,
@@ -32,8 +32,8 @@ export const plugins = [
     {
         resolve: `gatsby-plugin-manifest`,
         options: {
-            name: `PCCDiscord`,
-            short_name: `PCCDiscord`,
+            name: `PCCCommunity`,
+            short_name: `PCCCommunity`,
             start_url: `/`,
             background_color: `#000000`,
             theme_color: `#000000`,

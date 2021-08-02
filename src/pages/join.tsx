@@ -58,7 +58,11 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
             <Typography variant="h4" className={styles.text}>
                 現在部員の方
             </Typography>
-            <Typography className={styles.text}>入学時/進級時の部会の際に登録されたLineグループ内で参加方法が告知されていますので、そちらをご覧ください。</Typography>
+            <Typography className={styles.text}>
+                通常は入学時/進級時の部会の際に参加しています。
+                <br />
+                参加できていない方は参加済みの部員に招待を依頼してください。
+            </Typography>
             <Typography variant="h4" className={styles.text}>
                 現在部員でない在校生の方
             </Typography>
@@ -67,7 +71,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                 OBの方/上記以外で参加資格があるとお考えの方
             </Typography>
             <Typography className={styles.text}>
-                サーバー管理者まで
+                参加済みの方に招待を依頼するか、サーバー管理者まで
                 <Link to="/infos" className={styles.link}>
                     お問い合わせ
                 </Link>

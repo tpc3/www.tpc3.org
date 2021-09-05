@@ -81,4 +81,5 @@ export const plugins = [
             },
         },
     },
+    `gatsby-plugin-pnpm`,
 ]

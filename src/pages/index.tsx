@@ -1,9 +1,10 @@
 import * as React from "react"
 import { PageProps, Link, graphql } from "gatsby"
-import { createStyles, makeStyles, Theme, createMuiTheme, ThemeProvider } from "@material-ui/core/styles"
+import { createStyles, makeStyles, Theme, createTheme, ThemeProvider } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
 import FluidAnimation from "react-fluid-animation"
 import Tilt from "react-parallax-tilt"
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -29,8 +30,17 @@ const IntervalSplats = () => {
     if (document.hasFocus()) animation.addRandomSplats(1)
     setTimeout(IntervalSplats, Math.floor(Math.random() * Math.floor(1000)))
 }
+const config = {
+    textureDownsample: 2,
+    densityDissipation: 0.98,
+    velocityDissipation: 0.99,
+    pressureDissipation: 0.8,
+    pressureIterations: 25,
+    curl: 30,
+    splatRadius: 0.005,
+}
 
-const themeFontTitle = createMuiTheme({
+const themeFontTitle = createTheme({
     typography: {
         fontFamily: '"Press Start 2P"',
         h2: {
@@ -41,28 +51,36 @@ const themeFontTitle = createMuiTheme({
     },
 })
 
-const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
-    return (
-        <Layout>
-            <SEO title="Home" lang="ja" />
-            <div className={styles.container}>
-                <video src={Video} autoPlay loop muted className={styles.video} />
-            </div>
-            <div className={styles.title}>
-                <Tilt gyroscope={true} trackOnWindow={true}>
-                    <ThemeProvider theme={themeFontTitle}>
-                        <Typography variant="h2" onClick={addRandomSplats}>
-                            We are the "PCCCommunity"
-                        </Typography>
-                    </ThemeProvider>
-                </Tilt>
-            </div>
-            <FluidAnimation className={styles.fluid} animationRef={animationRef} />
-        </Layout>
-    )
+class Index extends React.Component {
+    componentDidMount() {
+        disableBodyScroll(null)
+    }
+    componentWillUnmount() {
+        clearAllBodyScrollLocks()
+    }
+    render() {
+        return (
+            <Layout>
+                <SEO title="Home" lang="ja" />
+                <div className={styles.container}>
+                    <video src={Video} autoPlay loop muted className={styles.video} />
+                </div>
+                <div className={styles.title}>
+                    <Tilt gyroscope={true} trackOnWindow={true}>
+                        <ThemeProvider theme={themeFontTitle}>
+                            <Typography variant="h2" onClick={addRandomSplats}>
+                                We are the "PCCCommunity"
+                            </Typography>
+                        </ThemeProvider>
+                    </Tilt>
+                </div>
+                <FluidAnimation className={styles.fluid} animationRef={animationRef} config={config} />
+            </Layout>
+        )
+    }
 }
 
-export default UsingTypescript
+export default Index
 
 export const query = graphql`
     {

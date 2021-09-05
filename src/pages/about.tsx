@@ -1,7 +1,7 @@
 import * as React from "react"
 import { PageProps, Link, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { createStyles, makeStyles, Theme, createMuiTheme, ThemeProvider, responsiveFontSizes } from "@material-ui/core/styles"
+import { createStyles, makeStyles, Theme, createTheme, ThemeProvider, responsiveFontSizes } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
 import Fab from "@material-ui/core/Fab"
 import SendIcon from "@material-ui/icons/Send"
@@ -22,14 +22,14 @@ type DataProps = {
     }
 }
 
-let themeFontTitle = createMuiTheme({
+let themeFontTitle = createTheme({
     typography: {
         fontFamily: '"Press Start 2P"',
     },
 })
 themeFontTitle = responsiveFontSizes(themeFontTitle)
 
-let themeFontBody = createMuiTheme()
+let themeFontBody = createTheme()
 themeFontBody = responsiveFontSizes(themeFontBody)
 
 const useStyles = makeStyles((theme: Theme) =>

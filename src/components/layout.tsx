@@ -37,10 +37,10 @@ const Layout = ({ children }) => {
     if (browser && !once) {
         switch (browser.name) {
             case "chrome":
-                if (parseFloat(browser.version) < 57) setOpen(true)
+                if (parseFloat(browser.version) < 70) setOpen(true)
                 break
             case "firefox":
-                if (parseFloat(browser.version) < 54) setOpen(true)
+                if (parseFloat(browser.version) < 67) setOpen(true)
                 break
             default:
                 setOpen(true)

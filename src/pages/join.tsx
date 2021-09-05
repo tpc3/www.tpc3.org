@@ -1,6 +1,6 @@
 import * as React from "react"
 import { PageProps, Link, graphql } from "gatsby"
-import { createStyles, makeStyles, Theme, createMuiTheme, ThemeProvider, responsiveFontSizes } from "@material-ui/core/styles"
+import { createStyles, makeStyles, Theme, createTheme, ThemeProvider, responsiveFontSizes } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
 
 import Layout from "../components/layout"
@@ -14,7 +14,7 @@ type DataProps = {
     }
 }
 
-let themeFontTitle = createMuiTheme({
+let themeFontTitle = createTheme({
     typography: {
         fontFamily: '"Press Start 2P"',
     },
@@ -22,7 +22,7 @@ let themeFontTitle = createMuiTheme({
 
 themeFontTitle = responsiveFontSizes(themeFontTitle)
 
-const themeFontBody = createMuiTheme({
+const themeFontBody = createTheme({
     typography: {
         body1: {
             fontSize: "1.5rem",

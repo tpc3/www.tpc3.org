@@ -1,5 +1,5 @@
 import * as React from "react"
-import { createStyles, makeStyles, Theme, createMuiTheme, ThemeProvider } from "@material-ui/core/styles"
+import { createStyles, makeStyles, Theme, createTheme, ThemeProvider } from "@material-ui/core/styles"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import AppBar from "@material-ui/core/AppBar"
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 )
 
-const themeFontTitle = createMuiTheme({
+const themeFontTitle = createTheme({
     typography: {
         fontFamily: '"Audiowide"',
         h6: {

@@ -182,6 +182,12 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                 <a href="https://www.npmjs.com/package/react-parallax-tilt" className={styles.linkNoColor}>
                     react-parallax-tilt
                 </a>
+                <a href="https://www.npmjs.com/package/body-scroll-lock" className={styles.linkNoColor}>
+                    body-scroll-lock
+                </a>
+                <a href="https://www.npmjs.com/package/@mdi/react" className={styles.linkNoColor}>
+                    Material Design Icons
+                </a>
                 <br />
                 ...and more...
             </Typography>

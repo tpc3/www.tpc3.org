@@ -53,7 +53,7 @@ const themeFontTitle = createTheme({
 
 class Index extends React.Component {
     componentDidMount() {
-        disableBodyScroll(null)
+        disableBodyScroll(document.body)
     }
     componentWillUnmount() {
         clearAllBodyScrollLocks()

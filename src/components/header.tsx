@@ -18,8 +18,12 @@ import HomeIcon from "@material-ui/icons/Home"
 import ForumIcon from "@material-ui/icons/Forum"
 import PersonAddIcon from "@material-ui/icons/PersonAdd"
 import InfoIcon from "@material-ui/icons/Info"
+import Icon from "@mdi/react"
+import { mdiDiscord } from "@mdi/js"
 
 import * as styles from "./header.module.css"
+import { GitHub, Twitter, YouTube } from "@material-ui/icons"
+import { StaticImage } from "gatsby-plugin-image"
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -53,29 +57,67 @@ const themeFontTitle = createTheme({
 const Header = ({ siteTitle }) => {
     const [open, setOpen] = React.useState(false)
     const classes = useStyles()
-    const handleDrawerOpen = () => {
-        setOpen(true)
-    }
-    const handleDrawerClose = () => {
-        setOpen(false)
-    }
     return (
         <header className={classes.root}>
             <AppBar position="static" color="transparent">
                 <Toolbar variant="dense">
-                    <IconButton edge="start" className={classes.menuButton} onClick={handleDrawerOpen} aria-label="menu">
+                    <IconButton edge="start" className={classes.menuButton} onClick={() => setOpen(true)} aria-label="menu">
                         <MenuIcon />
                     </IconButton>
                     <ThemeProvider theme={themeFontTitle}>
-                        <Typography variant="h6" className={classes.title}>
+                        <Typography variant="h6" className={classes.title} component="div">
                             <Link to="/" className={styles.link}>
                                 PCCCommunity
                             </Link>
                         </Typography>
                     </ThemeProvider>
+                    <IconButton
+                        size="medium"
+                        aria-label="GitHub"
+                        aria-controls="menu-appbar"
+                        onClick={() => {
+                            window.open("https://github.com/tpc3", "_blank")
+                        }}
+                        color="inherit"
+                    >
+                        <GitHub />
+                    </IconButton>
+                    <IconButton
+                        size="medium"
+                        aria-label="YouTube"
+                        aria-controls="menu-appbar"
+                        onClick={() => {
+                            window.open("https://www.youtube.com/channel/UCLadr5FRNvIqtgyNk3-whLg", "_blank")
+                        }}
+                        color="inherit"
+                    >
+                        <YouTube />
+                    </IconButton>
+                    <IconButton
+                        size="medium"
+                        aria-label="Twitter"
+                        aria-controls="menu-appbar"
+                        onClick={() => {
+                            window.open("https://twitter.com/tpc3_org", "_blank")
+                        }}
+                        color="inherit"
+                    >
+                        <Twitter />
+                    </IconButton>
+                    <IconButton
+                        size="medium"
+                        aria-label="Discord"
+                        aria-controls="menu-appbar"
+                        onClick={() => {
+                            window.open("join", "_blank")
+                        }}
+                        color="inherit"
+                    >
+                        <Icon path={mdiDiscord} size={1} />
+                    </IconButton>
                 </Toolbar>
             </AppBar>
-            <SwipeableDrawer anchor="top" open={open} onOpen={handleDrawerOpen} onClose={handleDrawerClose} classes={{ paper: classes.paper }}>
+            <SwipeableDrawer anchor="top" open={open} onOpen={() => setOpen(true)} onClose={() => setOpen(false)} classes={{ paper: classes.paper }}>
                 <List role="presentation">
                     <Link to="/" className={styles.link}>
                         <ListItem button key="top">

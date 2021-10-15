@@ -7,7 +7,6 @@ specifiers:
   '@material-ui/lab': ^4.0.0-alpha.60
   '@mdi/js': ^6.2.95
   '@mdi/react': ^1.5.0
-  body-scroll-lock: ^4.0.0-beta.0
   detect-browser: ^5.2.1
   gatsby: ^3.14.3
   gatsby-plugin-gatsby-cloud: ^3.2.0
@@ -42,7 +41,6 @@ dependencies:
   '@material-ui/lab': 4.0.0-alpha.60_fced322086cd04afb0b6feec9e866920
   '@mdi/js': 6.2.95
   '@mdi/react': 1.5.0
-  body-scroll-lock: 4.0.0-beta.0
   detect-browser: 5.2.1
   gatsby: 3.14.3_8e3522129ef2816b3c737f17aecb3a9d
   gatsby-plugin-gatsby-cloud: 3.2.0_gatsby@3.14.3
@@ -4429,10 +4427,6 @@ packages:
       qs: 6.7.0
       raw-body: 2.4.0
       type-is: 1.6.18
-    dev: false
-
-  /body-scroll-lock/4.0.0-beta.0:
-    resolution: {integrity: sha512-a7tP5+0Mw3YlUJcGAKUqIBkYYGlYxk2fnCasq/FUph1hadxlTRjF+gAcZksxANnaMnALjxEddmSi/H3OR8ugcQ==}
     dev: false
 
   /boolbase/1.0.0:

@@ -4,7 +4,6 @@ import { createStyles, makeStyles, Theme, createTheme, ThemeProvider } from "@ma
 import Typography from "@material-ui/core/Typography"
 import FluidAnimation from "react-fluid-animation"
 import Tilt from "react-parallax-tilt"
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -52,12 +51,6 @@ const themeFontTitle = createTheme({
 })
 
 class Index extends React.Component {
-    componentDidMount() {
-        disableBodyScroll(document.body)
-    }
-    componentWillUnmount() {
-        clearAllBodyScrollLocks()
-    }
     render() {
         return (
             <Layout>

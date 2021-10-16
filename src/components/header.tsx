@@ -71,50 +71,52 @@ const Header = ({ siteTitle }) => {
                             </Link>
                         </Typography>
                     </ThemeProvider>
-                    <IconButton
-                        size="medium"
-                        aria-label="GitHub"
-                        aria-controls="menu-appbar"
-                        onClick={() => {
-                            window.open("https://github.com/tpc3", "_blank")
-                        }}
-                        color="inherit"
-                    >
-                        <GitHub />
-                    </IconButton>
-                    <IconButton
-                        size="medium"
-                        aria-label="YouTube"
-                        aria-controls="menu-appbar"
-                        onClick={() => {
-                            window.open("https://www.youtube.com/channel/UCLadr5FRNvIqtgyNk3-whLg", "_blank")
-                        }}
-                        color="inherit"
-                    >
-                        <YouTube />
-                    </IconButton>
-                    <IconButton
-                        size="medium"
-                        aria-label="Twitter"
-                        aria-controls="menu-appbar"
-                        onClick={() => {
-                            window.open("https://twitter.com/tpc3_org", "_blank")
-                        }}
-                        color="inherit"
-                    >
-                        <Twitter />
-                    </IconButton>
-                    <IconButton
-                        size="medium"
-                        aria-label="Discord"
-                        aria-controls="menu-appbar"
-                        onClick={() => {
-                            window.open("join", "_blank")
-                        }}
-                        color="inherit"
-                    >
-                        <Icon path={mdiDiscord} size={1} />
-                    </IconButton>
+                    <div className={styles.icons}>
+                        <IconButton
+                            size="medium"
+                            aria-label="GitHub"
+                            aria-controls="menu-appbar"
+                            onClick={() => {
+                                window.open("https://github.com/tpc3", "_blank")
+                            }}
+                            color="inherit"
+                        >
+                            <GitHub />
+                        </IconButton>
+                        <IconButton
+                            size="medium"
+                            aria-label="YouTube"
+                            aria-controls="menu-appbar"
+                            onClick={() => {
+                                window.open("https://www.youtube.com/channel/UCLadr5FRNvIqtgyNk3-whLg", "_blank")
+                            }}
+                            color="inherit"
+                        >
+                            <YouTube />
+                        </IconButton>
+                        <IconButton
+                            size="medium"
+                            aria-label="Twitter"
+                            aria-controls="menu-appbar"
+                            onClick={() => {
+                                window.open("https://twitter.com/tpc3_org", "_blank")
+                            }}
+                            color="inherit"
+                        >
+                            <Twitter />
+                        </IconButton>
+                        <IconButton
+                            size="medium"
+                            aria-label="Discord"
+                            aria-controls="menu-appbar"
+                            onClick={() => {
+                                window.open("join", "_blank")
+                            }}
+                            color="inherit"
+                        >
+                            <Icon path={mdiDiscord} size={1} />
+                        </IconButton>
+                    </div>
                 </Toolbar>
             </AppBar>
             <SwipeableDrawer anchor="top" open={open} onOpen={() => setOpen(true)} onClose={() => setOpen(false)} classes={{ paper: classes.paper }}>

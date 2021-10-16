@@ -2,6 +2,8 @@
     color: white;
     text-decoration: inherit;
 }
-.icon {
-    display: inline;
+@media screen and (max-width: 500px) {
+    .icons {
+        display: none;
+    }
 }

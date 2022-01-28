@@ -2,7 +2,7 @@ export const siteMetadata = {
     title: `PCCCommunity`,
     description: `PCCCommunity official website`,
     author: `@gatsbyjs`,
-    siteUrl: `https://tpc3.pages.dev`,
+    siteUrl: `https://www.tpc3.org`,
 }
 export const plugins = [
     `gatsby-plugin-react-helmet`,
@@ -66,8 +66,8 @@ export const plugins = [
     {
         resolve: "gatsby-plugin-robots-txt",
         options: {
-            host: "https://pccdiscord.pages.dev",
-            sitemap: "https://pccdiscord.pages.dev/sitemap.xml",
+            host: "https://www.tpc3.org",
+            sitemap: "https://www.tpc3.org/sitemap.xml",
             policy: [{ userAgent: "*", allow: "/" }],
         },
     },

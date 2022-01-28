@@ -1,17 +1,12 @@
-import { createTheme, responsiveFontSizes } from "@material-ui/core"
+import { createTheme, responsiveFontSizes } from "@mui/material";
+// import { white } from '@mui/material/colors';
 
 let theme = createTheme({
     palette: {
-        type: "dark",
-        primary: {
-            main: "#000000",
-        },
-        secondary: {
-            main: "#000000",
-        },
-        background: {
-            default: "#000000",
-        },
+        mode: "dark",
+        // primary: white,
+        // secondary: white,
+        // background: white,
     },
 })
 theme = responsiveFontSizes(theme)

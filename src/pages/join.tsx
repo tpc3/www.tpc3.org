@@ -1,12 +1,27 @@
 import * as React from "react"
 import { PageProps, Link, graphql } from "gatsby"
-import { createStyles, makeStyles, Theme, createTheme, ThemeProvider, responsiveFontSizes } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
+import {
+    Theme,
+    createTheme,
+    ThemeProvider,
+    StyledEngineProvider,
+    responsiveFontSizes,
+} from "@mui/material/styles";
+import createStyles from '@mui/styles/createStyles';
+import makeStyles from '@mui/styles/makeStyles';
+import Typography from "@mui/material/Typography"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import * as styles from "./join.module.css"
+
+
+declare module '@mui/styles/defaultTheme' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DefaultTheme extends Theme {}
+}
+
 
 type DataProps = {
     site: {
@@ -37,11 +52,13 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
     return (
         <Layout>
             <SEO title="Join" lang="ja" />
-            <ThemeProvider theme={themeFontTitle}>
-                <Typography variant="h2" className={styles.text}>
-                    You wanna join?
-                </Typography>
-            </ThemeProvider>
+            <StyledEngineProvider injectFirst>
+                <ThemeProvider theme={themeFontTitle}>
+                    <Typography variant="h2" className={styles.text}>
+                        You wanna join?
+                    </Typography>
+                </ThemeProvider>
+            </StyledEngineProvider>
             <Typography className={styles.text}>
                 PCCCommunityに参加したいですか？こちらは参加方法を記したページです。
                 <br />
@@ -78,7 +95,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                 ください。
             </Typography>
         </Layout>
-    )
+    );
 }
 
 export default UsingTypescript

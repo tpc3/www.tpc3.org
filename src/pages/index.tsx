@@ -1,7 +1,9 @@
 import * as React from "react"
 import { PageProps, Link, graphql } from "gatsby"
-import { createStyles, makeStyles, Theme, createTheme, ThemeProvider } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
+import { Theme, createTheme, ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
+import createStyles from '@mui/styles/createStyles';
+import makeStyles from '@mui/styles/makeStyles';
+import Typography from "@mui/material/Typography"
 import FluidAnimation from "react-fluid-animation"
 import Tilt from "react-parallax-tilt"
 
@@ -10,6 +12,13 @@ import SEO from "../components/seo"
 
 import * as styles from "./index.module.css"
 import Video from "../images/index.mp4"
+
+
+declare module '@mui/styles/defaultTheme' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DefaultTheme extends Theme {}
+}
+
 
 type DataProps = {
     site: {
@@ -60,16 +69,18 @@ class Index extends React.Component {
                 </div>
                 <div className={styles.title}>
                     <Tilt gyroscope={true} trackOnWindow={true}>
-                        <ThemeProvider theme={themeFontTitle}>
-                            <Typography variant="h2" onClick={addRandomSplats}>
-                                We are the "PCCCommunity"
-                            </Typography>
-                        </ThemeProvider>
+                        <StyledEngineProvider injectFirst>
+                            <ThemeProvider theme={themeFontTitle}>
+                                <Typography variant="h2" onClick={addRandomSplats}>
+                                    We are the "TSPCCCommunity"
+                                </Typography>
+                            </ThemeProvider>
+                        </StyledEngineProvider>
                     </Tilt>
                 </div>
                 <FluidAnimation className={styles.fluid} animationRef={animationRef} config={config} />
             </Layout>
-        )
+        );
     }
 }
 

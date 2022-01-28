@@ -1,6 +1,6 @@
 export const siteMetadata = {
-    title: `PCCCommunity`,
-    description: `PCCCommunity official website`,
+    title: `TPC3`,
+    description: `TSPCCCommunity official website`,
     author: `@gatsbyjs`,
     siteUrl: `https://www.tpc3.org`,
 }

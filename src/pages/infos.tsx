@@ -1,20 +1,35 @@
 import * as React from "react"
 import { PageProps, Link, graphql } from "gatsby"
-import { createStyles, makeStyles, Theme, createTheme, ThemeProvider, responsiveFontSizes } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
-import Dialog from "@material-ui/core/Dialog"
-import Button from "@material-ui/core/Button"
-import Slide from "@material-ui/core/Slide"
-import { TransitionProps } from "@material-ui/core/transitions"
-import CloseIcon from "@material-ui/icons/Close"
-import AppBar from "@material-ui/core/AppBar"
-import Toolbar from "@material-ui/core/Toolbar"
-import IconButton from "@material-ui/core/IconButton"
+import {
+    Theme,
+    createTheme,
+    ThemeProvider,
+    StyledEngineProvider,
+    responsiveFontSizes
+} from "@mui/material/styles";
+import createStyles from '@mui/styles/createStyles';
+import makeStyles from '@mui/styles/makeStyles';
+import Typography from "@mui/material/Typography"
+import Dialog from "@mui/material/Dialog"
+import Button from "@mui/material/Button"
+import Slide from "@mui/material/Slide"
+import { TransitionProps } from "@mui/material/transitions"
+import CloseIcon from "@mui/icons-material/Close"
+import AppBar from "@mui/material/AppBar"
+import Toolbar from "@mui/material/Toolbar"
+import IconButton from "@mui/material/IconButton"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import FeedbackIcon from "@material-ui/icons/Feedback"
+import FeedbackIcon from "@mui/icons-material/Feedback"
 
 import * as styles from "./infos.module.css"
+
+
+declare module '@mui/styles/defaultTheme' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DefaultTheme extends Theme {}
+}
+
 
 type DataProps = {
     site: {
@@ -69,21 +84,25 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
     return (
         <Layout>
             <SEO title="Infos" lang="ja" />
-            <ThemeProvider theme={themeFontTitle}>
-                <Typography variant="h1" className={styles.text}>
-                    Infos
-                </Typography>
-            </ThemeProvider>
+            <StyledEngineProvider injectFirst>
+                <ThemeProvider theme={themeFontTitle}>
+                    <Typography variant="h1" className={styles.text}>
+                        Infos
+                    </Typography>
+                </ThemeProvider>
+            </StyledEngineProvider>
             <Typography className={styles.text}>
                 このサイトはGatsby.jsとMaterial-ui、その他のコンポーネントを利用してReactに全く触れたことがないオーナーが凡そ半日で仕上げたものになります。
                 <br />
                 見る人が見れば非常に汚い設計やデザインになっていることかと思いますが、どうかご容赦頂ければと思います。
             </Typography>
-            <ThemeProvider theme={themeFontTitle}>
-                <Typography variant="h2" className={styles.text}>
-                    Contact
-                </Typography>
-            </ThemeProvider>
+            <StyledEngineProvider injectFirst>
+                <ThemeProvider theme={themeFontTitle}>
+                    <Typography variant="h2" className={styles.text}>
+                        Contact
+                    </Typography>
+                </ThemeProvider>
+            </StyledEngineProvider>
             <Typography className={styles.text}>
                 This site is developed by owner of the PCCCommunity.
                 <br />
@@ -97,7 +116,12 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
             <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
                 <AppBar className={classes.appBar}>
                     <Toolbar>
-                        <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
+                        <IconButton
+                            edge="start"
+                            color="inherit"
+                            onClick={handleClose}
+                            aria-label="close"
+                            size="large">
                             <CloseIcon />
                         </IconButton>
                         <Typography variant="h6" className={classes.title}>
@@ -116,14 +140,16 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                     Now loading...
                 </iframe>
             </Dialog>
-            <ThemeProvider theme={themeFontTitle}>
-                <Typography variant="h3" className={styles.text}>
-                    Tech backends
-                </Typography>
-                <Typography variant="h4" className={styles.text}>
-                    Frameworks
-                </Typography>
-            </ThemeProvider>
+            <StyledEngineProvider injectFirst>
+                <ThemeProvider theme={themeFontTitle}>
+                    <Typography variant="h3" className={styles.text}>
+                        Tech backends
+                    </Typography>
+                    <Typography variant="h4" className={styles.text}>
+                        Frameworks
+                    </Typography>
+                </ThemeProvider>
+            </StyledEngineProvider>
             <Typography className={styles.text}>
                 This site is built with{" "}
                 <a href="https://www.gatsbyjs.com" className={styles.linkNoColor}>
@@ -135,11 +161,13 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                 </a>
                 .<br />
             </Typography>
-            <ThemeProvider theme={themeFontTitle}>
-                <Typography variant="h4" className={styles.text}>
-                    Hosters
-                </Typography>
-            </ThemeProvider>
+            <StyledEngineProvider injectFirst>
+                <ThemeProvider theme={themeFontTitle}>
+                    <Typography variant="h4" className={styles.text}>
+                        Hosters
+                    </Typography>
+                </ThemeProvider>
+            </StyledEngineProvider>
             <Typography className={styles.text}>
                 This site is hosted on the{" "}
                 <a href="https://pages.cloudflare.com" className={styles.linkNoColor}>
@@ -153,11 +181,13 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                 </a>{" "}
                 is used for contact page.
             </Typography>
-            <ThemeProvider theme={themeFontTitle}>
-                <Typography variant="h4" className={styles.text}>
-                    Fonts
-                </Typography>
-            </ThemeProvider>
+            <StyledEngineProvider injectFirst>
+                <ThemeProvider theme={themeFontTitle}>
+                    <Typography variant="h4" className={styles.text}>
+                        Fonts
+                    </Typography>
+                </ThemeProvider>
+            </StyledEngineProvider>
             <Typography className={styles.text}>
                 Fonts other then the default material-ui font (Roboto) are loaded from{" "}
                 <a href="https://fonts.google.com" className={styles.linkNoColor}>
@@ -165,11 +195,13 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                 </a>
                 .
             </Typography>
-            <ThemeProvider theme={themeFontTitle}>
-                <Typography variant="h4" className={styles.text}>
-                    Other packages
-                </Typography>
-            </ThemeProvider>
+            <StyledEngineProvider injectFirst>
+                <ThemeProvider theme={themeFontTitle}>
+                    <Typography variant="h4" className={styles.text}>
+                        Other packages
+                    </Typography>
+                </ThemeProvider>
+            </StyledEngineProvider>
             <Typography className={styles.text}>
                 <a href="https://www.npmjs.com/package/react-fluid-animation" className={styles.linkNoColor}>
                     react-fluid-animation
@@ -182,9 +214,11 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                 <a href="https://www.npmjs.com/package/react-parallax-tilt" className={styles.linkNoColor}>
                     react-parallax-tilt
                 </a>
+                <br />
                 <a href="https://www.npmjs.com/package/body-scroll-lock" className={styles.linkNoColor}>
                     body-scroll-lock
                 </a>
+                <br />
                 <a href="https://www.npmjs.com/package/@mdi/react" className={styles.linkNoColor}>
                     Material Design Icons
                 </a>
@@ -192,7 +226,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                 ...and more...
             </Typography>
         </Layout>
-    )
+    );
 }
 
 export default UsingTypescript

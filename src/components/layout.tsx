@@ -9,8 +9,8 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { detect } from "detect-browser"
-import Snackbar from "@material-ui/core/Snackbar"
-import MuiAlert, { AlertProps } from "@material-ui/lab/Alert"
+import Snackbar from "@mui/material/Snackbar"
+import MuiAlert, { AlertProps } from '@mui/material/Alert'
 
 import Header from "./header"
 import "./layout.css"

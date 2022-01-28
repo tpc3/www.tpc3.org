@@ -1,29 +1,38 @@
 import * as React from "react"
-import { createStyles, makeStyles, Theme, createTheme, ThemeProvider } from "@material-ui/core/styles"
+import { Theme, createTheme, ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
+import createStyles from '@mui/styles/createStyles';
+import makeStyles from '@mui/styles/makeStyles';
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import AppBar from "@material-ui/core/AppBar"
-import Toolbar from "@material-ui/core/Toolbar"
-import Typography from "@material-ui/core/Typography"
-import Button from "@material-ui/core/Button"
-import IconButton from "@material-ui/core/IconButton"
-import MenuIcon from "@material-ui/icons/Menu"
-import SwipeableDrawer from "@material-ui/core/SwipeableDrawer"
-import List from "@material-ui/core/List"
-import Divider from "@material-ui/core/Divider"
-import ListItem from "@material-ui/core/ListItem"
-import ListItemIcon from "@material-ui/core/ListItemIcon"
-import ListItemText from "@material-ui/core/ListItemText"
-import HomeIcon from "@material-ui/icons/Home"
-import ForumIcon from "@material-ui/icons/Forum"
-import PersonAddIcon from "@material-ui/icons/PersonAdd"
-import InfoIcon from "@material-ui/icons/Info"
+import AppBar from "@mui/material/AppBar"
+import Toolbar from "@mui/material/Toolbar"
+import Typography from "@mui/material/Typography"
+import Button from "@mui/material/Button"
+import IconButton from "@mui/material/IconButton"
+import MenuIcon from "@mui/icons-material/Menu"
+import SwipeableDrawer from "@mui/material/SwipeableDrawer"
+import List from "@mui/material/List"
+import Divider from "@mui/material/Divider"
+import ListItem from "@mui/material/ListItem"
+import ListItemIcon from "@mui/material/ListItemIcon"
+import ListItemText from "@mui/material/ListItemText"
+import HomeIcon from "@mui/icons-material/Home"
+import ForumIcon from "@mui/icons-material/Forum"
+import PersonAddIcon from "@mui/icons-material/PersonAdd"
+import InfoIcon from "@mui/icons-material/Info"
 import Icon from "@mdi/react"
 import { mdiDiscord } from "@mdi/js"
 
 import * as styles from "./header.module.css"
-import { GitHub, Twitter, YouTube } from "@material-ui/icons"
+import { GitHub, Twitter, YouTube } from "@mui/icons-material"
 import { StaticImage } from "gatsby-plugin-image"
+
+
+declare module '@mui/styles/defaultTheme' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DefaultTheme extends Theme {}
+}
+
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -61,16 +70,23 @@ const Header = ({ siteTitle }) => {
         <header className={classes.root}>
             <AppBar position="static" color="transparent">
                 <Toolbar variant="dense">
-                    <IconButton edge="start" className={classes.menuButton} onClick={() => setOpen(true)} aria-label="menu">
+                    <IconButton
+                        edge="start"
+                        className={classes.menuButton}
+                        onClick={() => setOpen(true)}
+                        aria-label="menu"
+                        size="large">
                         <MenuIcon />
                     </IconButton>
-                    <ThemeProvider theme={themeFontTitle}>
-                        <Typography variant="h6" className={classes.title} component="div">
-                            <Link to="/" className={styles.link}>
-                                PCCCommunity
-                            </Link>
-                        </Typography>
-                    </ThemeProvider>
+                    <StyledEngineProvider injectFirst>
+                        <ThemeProvider theme={themeFontTitle}>
+                            <Typography variant="h6" className={classes.title} component="div">
+                                <Link to="/" className={styles.link}>
+                                    TPC3
+                                </Link>
+                            </Typography>
+                        </ThemeProvider>
+                    </StyledEngineProvider>
                     <div className={styles.icons}>
                         <IconButton
                             size="medium"
@@ -156,7 +172,7 @@ const Header = ({ siteTitle }) => {
                 </List>
             </SwipeableDrawer>
         </header>
-    )
+    );
 }
 
 Header.propTypes = {

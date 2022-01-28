@@ -1,44 +1,48 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "www.tpc3.org",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Official website of the tpc3",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "TPC3 <contact@tpc3.org>",
   "dependencies": {
-    "@fontsource/roboto": "^4.5.1",
-    "@material-ui/core": "^4.12.3",
-    "@material-ui/icons": "^4.11.2",
-    "@material-ui/lab": "^4.0.0-alpha.60",
-    "@mdi/js": "^6.2.95",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@fontsource/roboto": "^4.5.2",
+    "@mdi/js": "^6.5.95",
     "@mdi/react": "^1.5.0",
-    "detect-browser": "^5.2.1",
-    "gatsby": "^3.14.3",
-    "gatsby-plugin-gatsby-cloud": "^3.2.0",
-    "gatsby-plugin-google-gtag": "^3.14.0",
-    "gatsby-plugin-image": "^1.14.1",
-    "gatsby-plugin-manifest": "^3.14.0",
-    "gatsby-plugin-offline": "^4.14.0",
-    "gatsby-plugin-pnpm": "^1.2.8",
-    "gatsby-plugin-react-helmet": "^4.14.0",
-    "gatsby-plugin-robots-txt": "^1.6.10",
-    "gatsby-plugin-sharp": "^3.14.1",
-    "gatsby-plugin-sitemap": "^4.10.0",
-    "gatsby-source-filesystem": "^3.14.0",
-    "gatsby-theme-material-ui": "^2.0.1",
-    "gatsby-transformer-sharp": "^3.14.0",
-    "prop-types": "^15.7.2",
+    "@mui/icons-material": "^5.3.1",
+    "@mui/lab": "^5.0.0-alpha.66",
+    "@mui/material": "^5.3.1",
+    "@mui/styles": "^5.3.0",
+    "detect-browser": "^5.3.0",
+    "gatsby": "^4.6.0",
+    "gatsby-plugin-gatsby-cloud": "^4.6.0",
+    "gatsby-plugin-google-gtag": "^4.6.0",
+    "gatsby-plugin-image": "^2.6.0",
+    "gatsby-plugin-manifest": "^4.6.0",
+    "gatsby-plugin-offline": "^5.6.0",
+    "gatsby-plugin-pnpm": "^1.2.10",
+    "gatsby-plugin-react-helmet": "^5.6.0",
+    "gatsby-plugin-robots-txt": "^1.7.0",
+    "gatsby-plugin-sharp": "^4.6.0",
+    "gatsby-plugin-sitemap": "^5.6.0",
+    "gatsby-source-filesystem": "^4.6.0",
+    "gatsby-theme-material-ui": "^5.1.0",
+    "gatsby-transformer-sharp": "^4.6.0",
+    "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-awesome-slider": "^4.1.0",
     "react-dom": "^17.0.2",
     "react-fluid-animation": "^1.0.1",
     "react-helmet": "^6.1.0",
-    "react-parallax-tilt": "^1.5.70",
-    "sharp": "^0.29.1",
-    "ts-node": "^10.3.0",
-    "typescript": "^4.4.4"
+    "react-parallax-tilt": "^1.5.90",
+    "sharp": "^0.29.3",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
   },
   "devDependencies": {
-    "prettier": "2.3.2"
+    "npm-check-updates": "^12.2.1",
+    "prettier": "2.5.1"
   },
   "keywords": [
     "gatsby"
@@ -55,15 +59,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/tpc3/www.tpc3.org"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "browserslist": [
-    "ChromeAndroid > 92",
-    "Chrome > 70",
-    "Firefox > 67",
-    "not dead"
-  ]
+    "url": "https://github.com/tpc3/www.tpc3.org/issues"
+  }
 }

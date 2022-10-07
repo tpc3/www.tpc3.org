@@ -74,7 +74,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                                     <Typography variant="body1" className={styles.body}>
                                         私達PCCCommunityは、多摩科学技術高校パソコン部に所属する有志部員・OBによって構成されているコミュニティです。
                                         <br />
-                                        現在8期生から12期生に至るまで凡そ130名程度が在籍しています。
+                                        現在8期生から13期生に至るまで凡そ150名程度が在籍しています。
                                         <br />
                                         Discordサーバーを活動拠点としています。
                                     </Typography>

@@ -66,8 +66,8 @@ class Index extends React.Component {
                 <SEO title="Home" lang="ja" />
                 <div className={styles.container}>
                     <video autoPlay loop muted className={styles.video}>
-                      <source src={Video_webm} type="video/webm">
-                      <source src={Video_mp4} type="video/mp4">
+                      <source src={Video_webm} type="video/webm" />
+                      <source src={Video_mp4} type="video/mp4" />
                     </video>
                 </div>
                 <div className={styles.title}>

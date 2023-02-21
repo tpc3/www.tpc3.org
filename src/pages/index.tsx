@@ -11,8 +11,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import * as styles from "./index.module.css"
-import Video from "../images/TPC3.webm"
-
+import Video_webm from "../images/TPC3.webm"
+import Video_mp4 from "../images/index.mp4"
 
 declare module '@mui/styles/defaultTheme' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -65,7 +65,10 @@ class Index extends React.Component {
             <Layout>
                 <SEO title="Home" lang="ja" />
                 <div className={styles.container}>
-                    <video src={Video} autoPlay loop muted className={styles.video} />
+                    <video autoPlay loop muted className={styles.video}>
+                      <source src={Video_webm} type="video/webm">
+                      <source src={Video_mp4} type="video/mp4">
+                    </video>
                 </div>
                 <div className={styles.title}>
                     <Tilt gyroscope={true} trackOnWindow={true}>

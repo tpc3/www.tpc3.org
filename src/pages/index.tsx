@@ -11,7 +11,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import * as styles from "./index.module.css"
-import Video from "../images/index.mp4"
+import Video from "../images/TPC3.webm"
 
 
 declare module '@mui/styles/defaultTheme' {

@@ -15,7 +15,7 @@
     "@mui/material": "^5.6.3",
     "@mui/styles": "^5.6.2",
     "detect-browser": "^5.3.0",
-    "gatsby": "^4.13.1",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-gatsby-cloud": "^4.13.0",
     "gatsby-plugin-google-gtag": "^4.13.0",
     "gatsby-plugin-image": "^2.13.0",

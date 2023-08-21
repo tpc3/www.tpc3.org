@@ -1,7 +1,7 @@
 import * as React from "react"
-import { Theme, createTheme, ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
-import createStyles from '@mui/styles/createStyles';
-import makeStyles from '@mui/styles/makeStyles';
+import { Theme, createTheme, ThemeProvider, StyledEngineProvider } from "@mui/material/styles"
+import createStyles from "@mui/styles/createStyles"
+import makeStyles from "@mui/styles/makeStyles"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import AppBar from "@mui/material/AppBar"
@@ -21,18 +21,16 @@ import ForumIcon from "@mui/icons-material/Forum"
 import PersonAddIcon from "@mui/icons-material/PersonAdd"
 import InfoIcon from "@mui/icons-material/Info"
 import Icon from "@mdi/react"
-import { mdiDiscord } from "@mdi/js"
+import { FaDiscord } from "react-icons/fa6"
 
 import * as styles from "./header.module.css"
 import { GitHub, Twitter, YouTube } from "@mui/icons-material"
 import { StaticImage } from "gatsby-plugin-image"
 
-
-declare module '@mui/styles/defaultTheme' {
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  interface DefaultTheme extends Theme {}
+declare module "@mui/styles/defaultTheme" {
+    // eslint-disable-next-line @typescript-eslint/no-empty-interface
+    interface DefaultTheme extends Theme {}
 }
-
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -70,12 +68,7 @@ const Header = ({ siteTitle }) => {
         <header className={classes.root}>
             <AppBar position="static" color="transparent">
                 <Toolbar variant="dense">
-                    <IconButton
-                        edge="start"
-                        className={classes.menuButton}
-                        onClick={() => setOpen(true)}
-                        aria-label="menu"
-                        size="large">
+                    <IconButton edge="start" className={classes.menuButton} onClick={() => setOpen(true)} aria-label="menu" size="large">
                         <MenuIcon />
                     </IconButton>
                     <StyledEngineProvider injectFirst>
@@ -130,7 +123,7 @@ const Header = ({ siteTitle }) => {
                             }}
                             color="inherit"
                         >
-                            <Icon path={mdiDiscord} size={1} />
+                            <FaDiscord />
                         </IconButton>
                     </div>
                 </Toolbar>
@@ -172,7 +165,7 @@ const Header = ({ siteTitle }) => {
                 </List>
             </SwipeableDrawer>
         </header>
-    );
+    )
 }
 
 Header.propTypes = {

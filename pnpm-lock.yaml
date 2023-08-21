@@ -272,7 +272,7 @@ packages:
       '@babel/core': 7.22.10
       '@babel/helper-validator-option': 7.16.7
       browserslist: 4.21.10
-      semver: 6.3.0
+      semver: 6.3.1
     dev: false
 
   /@babel/helper-compilation-targets@7.22.10:
@@ -3062,7 +3062,7 @@ packages:
       json5: 2.2.1
       msgpackr: 1.5.6
       nullthrows: 1.1.1
-      semver: 5.7.1
+      semver: 5.7.2
     dev: false
 
   /@parcel/diagnostic@2.8.3:
@@ -3147,7 +3147,7 @@ packages:
       '@parcel/diagnostic': 2.8.3
       '@parcel/utils': 2.8.3
       nullthrows: 1.1.1
-      semver: 5.7.1
+      semver: 5.7.2
     dev: false
 
   /@parcel/optimizer-terser@2.8.3(@parcel/core@2.8.3):
@@ -3177,7 +3177,7 @@ packages:
       '@parcel/types': 2.8.3(@parcel/core@2.8.3)
       '@parcel/utils': 2.8.3
       '@parcel/workers': 2.8.3(@parcel/core@2.8.3)
-      semver: 5.7.1
+      semver: 5.7.2
     dev: false
 
   /@parcel/packager-js@2.8.3(@parcel/core@2.8.3):
@@ -3268,7 +3268,7 @@ packages:
       detect-libc: 1.0.3
       nullthrows: 1.1.1
       regenerator-runtime: 0.13.9
-      semver: 5.7.1
+      semver: 5.7.2
     dev: false
 
   /@parcel/transformer-json@2.8.3(@parcel/core@2.8.3):
@@ -5607,7 +5607,7 @@ packages:
     dependencies:
       nice-try: 1.0.5
       path-key: 2.0.1
-      semver: 5.7.1
+      semver: 5.7.2
       shebang-command: 1.2.0
       which: 1.3.1
     dev: false
@@ -6633,7 +6633,7 @@ packages:
       minimatch: 3.1.2
       object.entries: 1.1.6
       object.fromentries: 2.0.6
-      semver: 6.3.0
+      semver: 6.3.1
     dev: false
 
   /eslint-plugin-react-hooks@4.6.0(eslint@7.32.0):
@@ -9727,7 +9727,7 @@ packages:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
     engines: {node: '>=8'}
     dependencies:
-      semver: 6.3.0
+      semver: 6.3.1
     dev: false
 
   /make-error@1.3.6:
@@ -10352,7 +10352,7 @@ packages:
     dependencies:
       hosted-git-info: 2.8.9
       resolve: 1.22.0
-      semver: 5.7.1
+      semver: 5.7.2
       validate-npm-package-license: 3.0.4
     dev: false
 
@@ -12535,13 +12535,8 @@ packages:
     resolution: {integrity: sha512-EjnoLE5OGmDAVV/8YDoN5KiajNadjzIp9BAHOhYeQHt7j0UWxjmgsx4YD48wp4Ue1Qogq38F1GNUJNqF1kKKxA==}
     dev: true
 
-  /semver@5.7.1:
-    resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
-    hasBin: true
-    dev: false
-
-  /semver@6.3.0:
-    resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
+  /semver@5.7.2:
+    resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
     hasBin: true
     dev: false
 

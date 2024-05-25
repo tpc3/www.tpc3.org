@@ -1,6 +1,6 @@
 export const siteMetadata = {
     title: `TPC3`,
-    description: `TSPCCCommunity official website`,
+    description: `TPC3 official website`,
     author: `@gatsbyjs`,
     siteUrl: `https://www.tpc3.org`,
 }
@@ -32,8 +32,8 @@ export const plugins = [
     {
         resolve: `gatsby-plugin-manifest`,
         options: {
-            name: `PCCCommunity`,
-            short_name: `PCCCommunity`,
+            name: `TPC3`,
+            short_name: `TPC3`,
             start_url: `/`,
             background_color: `#000000`,
             theme_color: `#000000`,

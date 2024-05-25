@@ -60,15 +60,15 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                 </ThemeProvider>
             </StyledEngineProvider>
             <Typography className={styles.text}>
-                PCCCommunityに参加したいですか？こちらは参加方法を記したページです。
+                TPC3に参加したいですか？こちらは参加方法を記したページです。
                 <br />
-                パソコン部員以外の方の参加は基本的に招待制となっております。
+                参加は基本的に招待制となっております。
             </Typography>
             <Typography variant="h3" className={styles.text}>
                 おことわり
             </Typography>
             <Typography className={styles.text}>
-                PCCCommunityでは、現在多摩科学技術高校生並びに卒業生、入学が確定している者以外の参加を基本的に受け付けておりません。
+                TPC3では、現在多摩科学技術高校生並びに卒業生、入学が確定している者以外の参加を基本的に受け付けておりません。
                 <br />
                 予めご了承ください。
             </Typography>

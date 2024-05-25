@@ -72,7 +72,7 @@ class Index extends React.Component {
                         <StyledEngineProvider injectFirst>
                             <ThemeProvider theme={themeFontTitle}>
                                 <Typography variant="h2" onClick={addRandomSplats}>
-                                    We are the "TSPCCCommunity"
+                                    We are the "TPC3"
                                 </Typography>
                             </ThemeProvider>
                         </StyledEngineProvider>

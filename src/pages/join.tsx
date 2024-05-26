@@ -76,9 +76,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => {
                 現在部員の方
             </Typography>
             <Typography className={styles.text}>
-                通常は入学時/進級時の部会の際に参加しています。
-                <br />
-                参加できていない方は参加済みの部員に招待を依頼してください。
+                参加済みの部員や役員に招待を依頼してください。
             </Typography>
             <Typography variant="h4" className={styles.text}>
                 現在部員でない在校生の方
